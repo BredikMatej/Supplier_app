@@ -1,0 +1,31 @@
+<template>
+    <div>
+        <a onclick={handleClick}>
+            <div class="content">
+                <div>
+                    <p class="title slds-align_absolute-center">{name}</p>
+                </div>
+                <img
+                    src={pictureUrl}
+                    class="product slds-align_absolute-center"
+                    alt="Product picture"
+                />
+                <div>
+                    <p class="slds-align_absolute-center lgfont">
+                        Price:&nbsp;
+                        <lightning-formatted-number
+                            format-style="currency"
+                            currency-code="EUR"
+                            value={price}
+                            class="price"
+                            maximum-fraction-digits="0"
+                        ></lightning-formatted-number>
+                    </p>
+                    <p class="slds-align_absolute-center lgfont">
+                        Brand:&nbsp;{brand}
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+</template>

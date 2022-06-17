@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Product display">
+        <div class="slds-m-around_medium content">
+            <div class="imgWrapper">
+                <img src={imgLink} alt="Product picture" width="450px"> 
+            </div>
+            <div class="flexContent">
+                <div>
+                    <h1 class="productName"><b>Name:</b> {name}</h1>
+                    <h2 class="productBrand"><b>Brand:</b> {brand}</h2>
+                </div>
+                <div>
+                    <h2 class="productPrice"><b>Price:</b>&nbsp;
+                        <lightning-formatted-number
+                            format-style="currency"
+                            currency-code="EUR"
+                            value={price}
+                            class="price"
+                            maximum-fraction-digits="0"
+                        ></lightning-formatted-number>
+                    </h2>
+                </div>
+            </div>  
+            <p class="productDesc"><b>Description:</b></p>
+            <p class="productDesctext">{desc}</p>
+        </div>  
+    </lightning-card>
+</template>

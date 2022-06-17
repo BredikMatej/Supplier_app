@@ -1,0 +1,14 @@
+.content {
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 0.1rem;
+}
+
+a {
+    color: inherit;
+}
+
+.title {
+    font-size: 1.3rem;
+    margin: 10;
+}

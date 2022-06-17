@@ -1,0 +1,36 @@
+<template>
+    <div class="slds-card slds-var-p-around_x-small">
+        <template if:true={products.data}>
+            <template if:true={products.data.records.length}>
+                <div class="content">
+                    <template
+                        for:each={products.data.records}
+                        for:item="product"
+                    >
+                        <c-product-box
+                            key={product.Id}
+                            product={product}
+                            class="slds-var-m-around_x-small"
+                        >
+                        </c-product-box>
+                    </template>
+                </div>
+                <c-paginator
+                    page-number={pageNumber}
+                    page-size={products.data.pageSize}
+                    total-item-count={products.data.totalItemCount}
+                    onprevious={handlePreviousPage}
+                    onnext={handleNextPage}
+                ></c-paginator>
+            </template>
+            <template if:false={products.data.records.length}>
+                <c-placeholder
+                    message="No products with that name."
+                ></c-placeholder>
+            </template>
+        </template>
+        <template if:true={products.error}>
+            <c-error-panel errors={products.error}></c-error-panel>
+        </template>
+    </div>
+</template>

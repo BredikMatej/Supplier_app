@@ -1,0 +1,39 @@
+<template>
+    <div class="slds-card slds-var-p-around_x-small">
+        <template if:true={searchBarIsVisible}>
+            <lightning-input
+                label="Search Key"
+                type="text"
+                onchange={handleSearchKeyChange}
+                class="search-bar"
+            ></lightning-input>
+        </template>
+        <template if:true={products.data}>
+            <template if:true={products.data.records.length}>
+                <div class="content">
+                    <template
+                        for:each={products.data.records}
+                        for:item="product"
+                    >
+                        <c-shopping-cart-product
+                            key={product.Id}
+                            product={product}
+                            onselected={handleProductSelected}
+                            onclick={handleProductSelected}
+                            class="slds-var-m-around_x-small"
+                        >
+                        </c-shopping-cart-product>
+                    </template>
+                </div>
+            </template>
+            <template if:false={products.data.records.length}>
+                <c-placeholder
+                    message="No products with that name."
+                ></c-placeholder>
+            </template>
+        </template>
+        <template if:true={products.error}>
+            <c-error-panel errors={products.error}></c-error-panel>
+        </template>
+    </div>
+</template>

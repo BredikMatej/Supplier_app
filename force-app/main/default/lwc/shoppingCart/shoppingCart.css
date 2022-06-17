@@ -1,0 +1,23 @@
+.slds-card {
+    background: rgb(243, 242, 242);
+}
+
+.search-bar {
+    display: block;
+    max-width: 200px;
+    margin: 0 0.5rem 0.3rem 0.5rem;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+c-shopping-cart-product {
+    min-width: 100px;
+    flex: 1;
+}
+
+c-paginator {
+    display: block;
+}

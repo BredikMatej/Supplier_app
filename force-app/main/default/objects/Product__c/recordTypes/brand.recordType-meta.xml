@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>brand</fullName>
+    <active>true</active>
+    <label>brand</label>
+    <picklistValues>
+        <picklist>Brand__c</picklist>
+        <values>
+            <fullName>Asus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lenovo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Msi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Search" icon-name="standard:search">
+        <div class="slds-var-m-horizontal_medium">
+            <lightning-input
+                label="Search Key"
+                type="search"
+                onchange={handleSearchKeyChange}
+            ></lightning-input>
+            <section>
+                <lightning-slider
+                    label="Price limit"
+                    step="50"
+                    min="0"
+                    max="5000"
+                    value={maxPrice}
+                    onchange={handleMaxPriceChange}
+                ></lightning-slider>
+            </section>
+        </div>
+    </lightning-card>
+</template>
